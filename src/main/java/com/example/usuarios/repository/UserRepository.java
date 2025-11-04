@@ -2,6 +2,8 @@ package com.example.usuarios.repository;
 
 import com.example.usuarios.model.User;
 
+
+
 import java.util.List;
 
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -11,5 +13,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
         
         // Método personalizado para buscar usuarios por nombre
         List<User> findByNombre(String nombre);
+     
+     
        
 }

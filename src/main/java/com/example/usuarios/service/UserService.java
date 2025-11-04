@@ -7,12 +7,12 @@ import java.util.Optional;
 
 public interface UserService {
     //Metodos de cada parametro
-    List<User> getAllUser();
-    Optional<User> getUserById(Long id);
-    User createUser(User user);
-    User  updateUser(Long id, User user );
-    void deleteUser(Long id);
+    List<User> getAllUser(); //Listar todos los usuarios
+    Optional<User> getUserById(Long id);//Listar usuario por id
+    User createUser(User user);//Crear usuario
+    User  updateUser(Long id, User user );//Actualizar usuario
+    void deleteUser(Long id);//Eliminar usuario
 
-    String login(String email, String clave);
+    String login(String email, String clave);//Login usuario
 }
 
