@@ -57,7 +57,7 @@ public class UserServiceImpl implements UserService {
                 .map(existing -> {
                     existing.setNombre(user.getNombre());
                     existing.setEmail(user.getEmail());
-                    existing.setClave(user.getClave());
+                    existing.setPassword(user.getPassword());
                     existing.setRol(user.getRol());
                     User updated = userRepository.save(existing);
                     log.debug("Usuario actualizado ", id);

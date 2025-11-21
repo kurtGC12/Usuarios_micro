@@ -5,6 +5,7 @@ import com.example.usuarios.model.User;
 
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -13,7 +14,10 @@ import org.springframework.data.jpa.repository.JpaRepository;
         
         // Método personalizado para buscar usuarios por nombre
         List<User> findByNombre(String nombre);
-     
+        // Método personalizado para buscar usuarios por email
+        Optional<User> findByEmail(String email);
+        // Método personalizado para buscar usuarios por rol
+        List<User> findByRol(String rol);
      
        
 }
