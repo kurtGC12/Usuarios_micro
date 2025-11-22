@@ -14,7 +14,7 @@ import lombok.Data;
 
 @Entity
 @Table(name = "USUARIO") // nombre de la tabla
-public class User  {
+public class Usuario  {
 
     @Id // clave primaria
     @GeneratedValue(strategy = GenerationType.IDENTITY) // se genera automaticamente el id

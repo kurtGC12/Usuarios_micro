@@ -1,6 +1,6 @@
 package com.example.usuarios.repository;
 
-import com.example.usuarios.model.User;
+import com.example.usuarios.model.Usuario;
 
 
 
@@ -10,14 +10,14 @@ import java.util.Optional;
 import org.springframework.data.jpa.repository.JpaRepository;
 
    //Acceso a la base de datos mediante JPA
-    public interface UserRepository extends JpaRepository<User, Long>{
+    public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
         
         // Método personalizado para buscar usuarios por nombre
-        List<User> findByNombre(String nombre);
+        List<Usuario> findByNombre(String nombre);
         // Método personalizado para buscar usuarios por email
-        Optional<User> findByEmail(String email);
+        Optional<Usuario> findByEmail(String email);
         // Método personalizado para buscar usuarios por rol
-        List<User> findByRol(String rol);
+        List<Usuario> findByRol(String rol);
      
        
 }

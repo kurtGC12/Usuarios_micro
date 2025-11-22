@@ -1,7 +1,7 @@
 package com.example.usuarios.config;
 
-import com.example.usuarios.model.User;
-import com.example.usuarios.repository.UserRepository;   
+import com.example.usuarios.model.Usuario;
+import com.example.usuarios.repository.UsuarioRepository;   
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
@@ -12,9 +12,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class UsuarioData implements CommandLineRunner {
 
-    private final UserRepository userRepository;
+    private final UsuarioRepository userRepository;
 
-    public UsuarioData(UserRepository userRepository) {
+    public UsuarioData(UsuarioRepository userRepository) {
         this.userRepository = userRepository;
     }
 
@@ -27,7 +27,7 @@ public class UsuarioData implements CommandLineRunner {
                 () -> {
                     log.info("⚙️ Creando usuario ADMIN por defecto");
 
-                    User admin = new User();
+                    Usuario admin = new Usuario();
                     admin.setNombre("Admin laboratorio");
                     admin.setEmail(emailAdmin);
                     admin.setPassword("admin123"); 
