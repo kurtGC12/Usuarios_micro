@@ -30,7 +30,7 @@ public class UsuarioData implements CommandLineRunner {
                     Usuario admin = new Usuario();
                     admin.setNombre("Admin laboratorio");
                     admin.setEmail(emailAdmin);
-                    admin.setPassword("admin123"); 
+                    admin.setPassword("Admin123#"); 
                     admin.setRol("ADMIN");
                 
                     userRepository.save(admin);
