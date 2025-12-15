@@ -3,7 +3,7 @@ FROM eclipse-temurin:21-jre
 WORKDIR /app
 
 # Copiar el JAR
-COPY target/usuarios-0.0.1-SNAPSHOT.jar app.jar
+COPY target/*SNAPSHOT.jar app.jar
 
 # Copiar el Wallet
 COPY Wallet_FullStack3 /app/Wallet_FullStack3
