@@ -1,14 +1,16 @@
-# Imagen base 
-FROM eclipse-temurin:21-jdk-jammy
+FROM eclipse-temurin:21-jre
 
-# Directorio de trabajo
 WORKDIR /app
 
-# Copiar el JAR generado por Maven
-COPY target/*.jar app.jar
+# Copiar el JAR
+COPY target/usuarios-0.0.1-SNAPSHOT.jar app.jar
 
-# Exponer puerto 
+# Copiar el Wallet
+COPY Wallet_FullStack3 /app/Wallet_FullStack3
+
+# Variable de entorno Oracle
+ENV TNS_ADMIN=/app/Wallet_FullStack3
+
 EXPOSE 8081
 
-# Comando para ejecutar tu microservicio
-ENTRYPOINT ["java", "-jar", "/app/app.jar"]
+ENTRYPOINT ["java","-jar","app.jar"]
